@@ -447,23 +447,23 @@ Users and redistributors should review the licenses of the dependencies listed i
 
 ## Troubleshooting
 
-`**Ollama Is Not Detected**`
+**`Ollama Is Not Detected`**
 
 Check that Ollama is installed:
-
+```bash
 ollama --version
-
+```
 
 Then check the installed models:
-
+```bash
 ollama list
-
+```
 
 Make sure Qwen3 8B is installed:
-
+```bash
 ollama pull qwen3:8b
-
-Docker Cannot Connect to Ollama
+```
+**`Docker Cannot Connect to Ollama`**
 
 Make sure:
 
