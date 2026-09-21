@@ -254,6 +254,7 @@ Matching results are stored in:
 
 Example:
 
+```text
 data/
 ├── cvs/
 │   ├── john-doe.pdf
@@ -265,14 +266,14 @@ data/
 │
 └── results/
     └── ...
-
-Local AI
+```
+## Local AI
 
 CV Matcher uses Ollama as the local LLM runtime.
 
 The default model is:
 
-qwen3:8b
+`qwen3:8b`
 
 
 The application communicates with Ollama rather than using a hosted AI API.
@@ -281,7 +282,7 @@ This allows CVs and job descriptions to remain on the local machine rather than 
 
 However, local processing should not automatically be interpreted as a security guarantee. Review the application's configuration and network settings before processing sensitive information.
 
-Docker and Ollama
+## Docker and Ollama
 
 The CV Matcher application runs inside Docker, while Ollama runs on the host machine.
 
@@ -291,48 +292,48 @@ The exact Ollama host address is configured in the project's Docker and applicat
 
 On Docker Desktop, this commonly involves:
 
-host.docker.internal
+`host.docker.internal`
 
 
 Check:
 
-docker-compose.yml
-
+`docker-compose.yml`
 
 and:
 
-app/config.py
+`app/config.py`
 
 
 if you need to change the Ollama connection.
 
-Configuration
+## Configuration
 
 Application configuration is handled in:
 
-app/config.py
+`app/config.py`
 
 
 The Ollama client is implemented in:
 
-app/ollama_client.py
+`app/ollama_client.py`
 
 
 Document parsing is handled in:
 
-app/document_parser.py
+`app/document_parser.py`
 
 
 Matching logic is handled in:
 
-app/matcher.py
+`app/matcher.py`
 
 
 Prompt configuration is located in:
 
-app/prompts/matching.py
+`app/prompts/matching.py`
 
-Project Structure
+## Project Structure
+```text
 cv-matcher/
 │
 ├── check.ps1
@@ -363,75 +364,47 @@ cv-matcher/
     │   └── .gitkeep
     └── results/
         └── .gitkeep
+```
 
-Data and Privacy
+## Data and Privacy
 
 CV Matcher is designed to run locally.
 
 Your documents are stored under:
 
-data/
+`data/`
 
 
 The application does not require uploading CVs or job descriptions to a hosted AI service.
 
 However, you should review the application's configuration and source code before using it with sensitive documents, particularly if you modify the Ollama connection or add external services.
 
-Do Not Commit Personal Documents
 
-The data/ directory is intended for local files.
-
-Avoid committing:
-
-CVs containing personal information
-
-Job descriptions containing confidential information
-
-Generated matching results containing personal data
-
-Other sensitive documents
-
-Consider adding the following to .gitignore:
-
-data/cvs/*
-data/jobs/*
-data/results/*
-
-
-You can keep the directories in Git by adding .gitkeep files:
-
-data/
-├── cvs/
-│   └── .gitkeep
-├── jobs/
-│   └── .gitkeep
-└── results/
-    └── .gitkeep
-
-Third-Party Software and Models
+## Third-Party Software and Models
 
 CV Matcher uses third-party software, libraries, and models.
 
 These components are separate from the CV Matcher application code and remain subject to their own licenses and terms.
 
-Qwen3
+### Qwen3
 
-CV Matcher uses the Qwen3 8B open-weight model through Ollama.
+CV Matcher uses the **Qwen3 8B** open-weight model through **Ollama**.
 
-Qwen3 is released under the Apache License 2.0. Refer to the official Qwen3 repository for the applicable license and model information:
+Qwen3 is released under the **Apache License 2.0**. Refer to the official Qwen3 repository for the applicable license and model information:
 
-https://github.com/QwenLM/Qwen3
+`https://github.com/QwenLM/Qwen3`
 
 The Qwen3 model is not included in this repository.
 
 Users download the model separately through Ollama:
 
+```bash
 ollama pull qwen3:8b
+```
 
+**Users are responsible for complying with the applicable terms when downloading, using, modifying, or redistributing the model.**
 
-Users are responsible for complying with the applicable terms when downloading, using, modifying, or redistributing the model.
-
-Ollama
+### Ollama
 
 CV Matcher uses Ollama as the local model runtime.
 
@@ -439,41 +412,42 @@ Ollama is a separate third-party project. This repository does not include the O
 
 Official website:
 
-https://ollama.com/
+`https://ollama.com/`
 
-Docker
+### Docker
 
 CV Matcher uses Docker to run the application.
 
-Docker and Docker Engine are separate third-party software components and are subject to their respective licenses and terms.
+Docker and Docker Engine are separate third-party software components and are **subject to their respective licenses and terms**.
 
 Official website:
 
-https://www.docker.com/
+`https://www.docker.com/`
 
-Docker Desktop
+### Docker Desktop
 
 Docker Desktop is used as part of the recommended Windows development/runtime environment.
 
-Docker Desktop is a separate third-party product and is subject to Docker's licensing, subscription, and usage terms.
+Docker Desktop is a separate third-party product and is **subject to Docker's licensing, subscription, and usage terms.**
 
 Official information:
 
-https://www.docker.com/products/docker-desktop/
+`https://www.docker.com/products/docker-desktop/`
 
-Python Dependencies
+### Python Dependencies
 
 CV Matcher uses Python packages listed in:
 
-requirements.txt
+`requirements.txt`
 
 
-These packages are separate third-party components and may have their own licenses.
+**These packages are separate third-party components and may have their own licenses.**
 
-Users and redistributors should review the licenses of the dependencies listed in requirements.txt.
+Users and redistributors should review the licenses of the dependencies listed in `requirements.txt`.
 
-Troubleshooting
-Ollama Is Not Detected
+## Troubleshooting
+
+`**Ollama Is Not Detected**`
 
 Check that Ollama is installed:
 
