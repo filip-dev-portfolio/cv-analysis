@@ -100,6 +100,7 @@ The checker reports missing dependencies and provides the relevant official down
 
 For example:
 
+```text
 ==============================================
        CV Matcher - Dependency Check
 ==============================================
@@ -126,7 +127,7 @@ Checking Ollama model...
 All dependencies are installed.
 
 You should be ready to run CV Matcher.
-
+```
 
 If something is missing, the checker displays the relevant official website or command needed to resolve the issue.
 
