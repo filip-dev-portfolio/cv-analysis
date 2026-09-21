@@ -131,15 +131,17 @@ You should be ready to run CV Matcher.
 
 If something is missing, the checker displays the relevant official website or command needed to resolve the issue.
 
-After installing the missing dependencies, you can run the checker again:
+After installing the missing dependencies, run the checker again:
 
+```powershell
 .\check.ps1
+```
 
-Installing the Dependencies
+### Installing the Dependencies
 
 If the dependency checker reports a missing dependency, install it from the relevant official source.
 
-Python
+### Python
 
 Download Python from:
 
@@ -147,7 +149,7 @@ https://www.python.org/downloads/
 
 Python 3.12 or newer is recommended.
 
-Docker Desktop
+### Docker Desktop
 
 Download Docker Desktop from:
 
@@ -155,9 +157,9 @@ https://www.docker.com/products/docker-desktop/
 
 Make sure Docker Desktop is running before starting CV Matcher.
 
-Docker Desktop is a separate third-party product and is subject to Docker's own licensing and terms.
+> Docker Desktop is a separate third-party product and is subject to Docker's own licensing and terms.
 
-Ollama
+### Ollama
 
 Download Ollama from:
 
@@ -165,7 +167,9 @@ https://ollama.com/download
 
 After installing Ollama, download the Qwen3 8B model:
 
+```bash
 ollama pull qwen3:8b
+```
 
 
 Verify that the model is available:
