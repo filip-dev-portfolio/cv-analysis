@@ -91,7 +91,7 @@ Open PowerShell in the project directory and run:
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\check.ps1
-
+```
 
 
 The execution-policy change applies only to the current PowerShell process.
