@@ -1,44 +1,34 @@
-CV Matcher
+# CV Matcher
 
-A local CV-to-job matching application powered by Ollama + Qwen3 8B.
+A local CV-to-job matching application powered by **Ollama + Qwen3 8B**.
 
 CV Matcher runs locally using Docker and connects to a local Ollama instance running the Qwen3 8B model. It compares CVs against job descriptions and produces matching results without requiring your documents to be sent to a third-party cloud AI service.
 
-Privacy note: CV Matcher is designed for local processing. However, you should always review the application's configuration and source code before processing sensitive documents.
+> **Privacy note:** CV Matcher is designed for local processing. However, you should always review the application's configuration and source code before processing sensitive documents.
 
-Features
+## Features
 
-🧠 Local AI-powered CV matching with Qwen3 8B
+- 🧠 Local AI-powered CV matching with Qwen3 8B
+- 🔒 CVs and job descriptions can remain on your local machine
+- 🐳 Runs the application with Docker
+- ⚡ Uses local Ollama for LLM inference
+- 📄 Supports:
+  - PDF
+  - DOCX
+  - TXT
+  - Markdown (`.md`)
+- 📁 CVs and job descriptions are stored in the local `data/` directory
+- 📊 Matching results are saved locally
+- 🪟 Includes a Windows dependency checker
+- 🌐 No hosted AI API is required
 
-🔒 CVs and job descriptions can remain on your local machine
 
-🐳 Runs the application with Docker
-
-⚡ Uses local Ollama for LLM inference
-
-📄 Supports:
-
-PDF
-
-DOCX
-
-TXT
-
-Markdown (.md)
-
-📁 CVs and job descriptions are stored in the local data/ directory
-
-📊 Matching results are saved locally
-
-🪟 Includes a Windows dependency checker
-
-🌐 No hosted AI API is required
-
-How It Works
+## How It Works
 
 The application runs inside Docker and communicates with Ollama running locally on your machine.
 
-                    Your computer
+
+   Your computer
 ┌─────────────────────────────────────────────────────┐
 │                                                     │
 │   ┌──────────────────┐                              │
@@ -66,47 +56,42 @@ The application runs inside Docker and communicates with Ollama running locally 
 └─────────────────────────────────────────────────────┘
 
 
+
 Your documents are processed by the application and sent to your local Ollama instance for matching.
 
 The application does not require a hosted AI API.
 
-Requirements
+## Requirements
 
 You need the following installed:
 
-Python 3.12+
-
-Docker Desktop
-
-Ollama
-
-Qwen3 8B
-
-Windows
-
-The repository includes a PowerShell dependency checker:
-
-check.ps1
+- Python 3.12+
+- Docker Desktop
+- Ollama
+- Qwen3 8B
 
 
-The script checks whether the required dependencies are available:
+## Windows
 
-Python
+The repository includes a PowerShell dependency checker: `check.ps1`
 
-Docker
+The script checks whether the following dependencies are available:
 
-Ollama
-
-Qwen3 8B
+- Python
+- Docker
+- Ollama
+- Qwen3 8B
 
 The script does not install, download, or modify these dependencies.
 
-Run the Dependency Checker
+### Run the Dependency Checker
 
 Open PowerShell in the project directory and run:
 
+```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\check.ps1
+
 
 
 The execution-policy change applies only to the current PowerShell process.
