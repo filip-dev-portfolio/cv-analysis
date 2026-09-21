@@ -215,41 +215,41 @@ Docker will build the application and start the CV Matcher container.
 
 4. **Open the Application**
 
-Once the container is running, open the address configured by docker-compose.yml in your browser.
+Once the container is running, open the address configured by `docker-compose.yml` in your browser.
 
 For example:
 
 http://localhost:8000
 
 
-If your docker-compose.yml uses a different port, use that port instead.
+If your `docker-compose.yml` uses a different port, use that port instead.
 
-Documents
+## Documents
 
 CV Matcher currently supports:
 
-.pdf
-.docx
-.txt
-.md
+- .pdf
+- .docx
+- .txt
+- .md
 
-CVs
+### CVs
 
 Place CVs in:
 
-data/cvs/
+`data/cvs/`
 
-Job Descriptions
+### Job Descriptions
 
 Place job descriptions in:
 
-data/jobs/
+`data/jobs/`
 
-Matching Results
+### Matching Results
 
 Matching results are stored in:
 
-data/results/
+`data/results/`
 
 
 Example:
