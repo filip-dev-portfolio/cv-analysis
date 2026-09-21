@@ -84,7 +84,7 @@ The script checks whether the following dependencies are available:
 
 The script does not install, download, or modify these dependencies.
 
-### Run the Dependency Checker
+## Run the Dependency Checker
 
 Open PowerShell in the project directory and run:
 
@@ -137,13 +137,13 @@ After installing the missing dependencies, run the checker again:
 .\check.ps1
 ```
 
-### Installing the Dependencies
+## Installing the Dependencies
 
 If the dependency checker reports a missing dependency, install it from the relevant official source.
 
 ### Python
 
-Download Python from:
+**Download Python from:**
 
 https://www.python.org/downloads/
 
@@ -151,7 +151,7 @@ Python 3.12 or newer is recommended.
 
 ### Docker Desktop
 
-Download Docker Desktop from:
+**Download Docker Desktop from:**
 
 https://www.docker.com/products/docker-desktop/
 
@@ -161,7 +161,7 @@ Make sure Docker Desktop is running before starting CV Matcher.
 
 ### Ollama
 
-Download Ollama from:
+**Download Ollama from:**
 
 https://ollama.com/download
 
@@ -174,39 +174,46 @@ ollama pull qwen3:8b
 
 Verify that the model is available:
 
+```bash
 ollama list
-
+```
 
 You should see:
 
+```bash
 qwen3:8b
+```
 
-Running the Application
-1. Start Ollama
+## Running the Application
+1. **Start Ollama**
 
 Make sure Ollama is running and that Qwen3 8B is available:
 
+```bash
 ollama list
-
+```
 
 If necessary:
 
+```bash
 ollama pull qwen3:8b
+```
 
-2. Start Docker
+2. **Start Docker**
 
 Make sure Docker Desktop is running.
 
-3. Start CV Matcher
+3. **Start CV Matcher**
 
 From the project directory, run:
 
+```bash
 docker compose up --build
-
+```
 
 Docker will build the application and start the CV Matcher container.
 
-4. Open the Application
+4. **Open the Application**
 
 Once the container is running, open the address configured by docker-compose.yml in your browser.
 
