@@ -28,7 +28,7 @@ CV Matcher runs locally using Docker and connects to a local Ollama instance run
 The application runs inside Docker and communicates with Ollama running locally on your machine.
 
 
-   Your computer
+ ```text  Your computer
 ┌─────────────────────────────────────────────────────┐
 │                                                     │
 │   ┌──────────────────┐                              │
@@ -54,7 +54,7 @@ The application runs inside Docker and communicates with Ollama running locally 
 │   └── results/                                      │
 │                                                     │
 └─────────────────────────────────────────────────────┘
-
+```
 
 
 Your documents are processed by the application and sent to your local Ollama instance for matching.
